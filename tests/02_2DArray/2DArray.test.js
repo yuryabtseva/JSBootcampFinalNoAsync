@@ -44,13 +44,13 @@ describe('twoDArray', () => {
       [3, 5],
     ])).to.equal(31);
 
-    spy = sinon.spy(Array.prototype, 'flat');
     const returnedValue = twoDArray([
       [1, 3],
       [2, 4],
       [9, 0],
     ]);
 
+    spy = sinon.spy(Array.prototype, 'flat');
     expect(returnedValue).to.deep.equal(19);
     sinon.assert.notCalled(spy);
   });

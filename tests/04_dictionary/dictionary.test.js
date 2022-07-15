@@ -18,7 +18,6 @@ describe('Dictionary', () => {
 
     it('is a function that calls the dictionary api database and returns the meanings array', async () => {
       expect(Array.isArray(meaningOminous)).to.equal(true);
-      console.log('meaning', meaningOminous);
 
       expect(meaningOminous[0].synonyms).to.deep.equal([
         'inauspicious',
@@ -37,7 +36,6 @@ describe('Dictionary', () => {
     });
 
     it('is a function that calls the dictionary api database and returns the first definition listed for the word passed', async () => {
-      console.log('meaning', firstDefinition);
       expect(typeof firstDefinition).to.equal('string');
 
       expect(firstDefinition).to.equal('The act of postponing, delaying or putting off, especially habitually or intentionally.');
