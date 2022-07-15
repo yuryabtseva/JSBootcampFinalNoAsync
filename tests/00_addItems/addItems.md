@@ -1,0 +1,1 @@
+Write a function named addItems that will take a cart and items to add to the cart. The function should add the items to add to the cart and return one object containing the original cart and new items added.
