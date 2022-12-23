@@ -1,14 +1,11 @@
 /* eslint-disable no-undef */
 const { expect } = require('chai');
-const sinon = require('sinon');
+
 const {
   twoDArray,
 } = require('./2DArray');
 
 describe('twoDArray', () => {
-  after(() => {
-    spy.restore('flat');
-  });
   it('is a function', () => {
     expect(typeof twoDArray).to.equal('function');
   });
@@ -24,20 +21,17 @@ describe('twoDArray', () => {
     expect(typeof returnedValue).to.equal('number');
   });
 
-  it('returns the correct flat array when a 2D array is passed', () => {
+  it('returns the correct flat array when a flat array is passed', () => {
     expect(twoDArray([
-      [1, 2],
-      [8, 9],
+      1, 2, 8, 9,
     ])).to.equal(20);
 
     expect(twoDArray([
-      [7, 6],
-      [5, 4],
-      [3, 2],
+      7, 6, 5, 4, 3, 2,
     ])).to.equal(27);
   });
 
-  it('does not call Array.prototype.flat', () => {
+  it('returns the correct number when a 2d Array is passed ', () => {
     expect(twoDArray([
       [7, 7],
       [5, 4],
@@ -49,9 +43,6 @@ describe('twoDArray', () => {
       [2, 4],
       [9, 0],
     ]);
-
-    spy = sinon.spy(Array.prototype, 'flat');
     expect(returnedValue).to.deep.equal(19);
-    sinon.assert.notCalled(spy);
   });
 });

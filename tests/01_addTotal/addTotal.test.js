@@ -60,7 +60,7 @@ describe('addTotal', () => {
     expect(addTotal(cart, 'NJ')).to.equal(12.81);
   });
 
-  it('calls Array.prototype.reduce', () => {
+  it('***EXTRA-CREDIT*** calls Array.prototype.reduce', () => {
     const cart = [
       {
         item: 'milk',
