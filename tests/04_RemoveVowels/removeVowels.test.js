@@ -23,6 +23,6 @@ describe('removeVowels', () => {
   it('Can handle if capital letters are vowels', () => {
     const returnedValue = removeVowels('It rains in Spain mAInly on the plains');
 
-    expect(returnedValue).to.deep.equal('t rns n Spn mnly n the plns');
+    expect(returnedValue).to.deep.equal('t rns n Spn mnly n th plns');
   });
 });

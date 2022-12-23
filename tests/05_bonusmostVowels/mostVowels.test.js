@@ -10,7 +10,7 @@ describe('mostVowels', () => {
   });
 
   it('returns a string', () => {
-    const returnedValue = mostVowels('see eye to eye');
+    const returnedValue = mostVowels('the cat in the boat');
     expect(typeof returnedValue).to.equal('string');
   });
 
