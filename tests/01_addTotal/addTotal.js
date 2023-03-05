@@ -1,4 +1,6 @@
 // make sure to check readme for information about taxes
+
+// great job!!
 function addTotal(arr, state) {
     let tax = 0;
     if (state === "NY") {
